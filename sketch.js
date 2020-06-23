@@ -36,14 +36,17 @@ function setup(){
 
     bird = new Bird(100,100);
 
+    box6 = new Box(200, 100, 50, 50)
+
+    slingshot = new Slingshot(bird.body,box6.body);
 }
 
 function draw(){
     background(backgroundImg);
     Engine.update(engine);
-    console.log(box2.body.position.x);
-    console.log(box2.body.position.y);
-    console.log(box2.body.angle);
+    //console.log(box2.body.position.x);
+    //console.log(box2.body.position.y);
+    //console.log(box2.body.angle);
     box1.display();
     box2.display();
     ground.display();
@@ -58,6 +61,10 @@ function draw(){
     box5.display();
     log4.display();
     log5.display();
+
+    box6.display();
+
+    slingshot.view();
 
     bird.display();
     platform.display();
